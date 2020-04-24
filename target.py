@@ -6,6 +6,8 @@ URL = 'https://www.target.com/p/nintendo-switch-with-neon-blue-and-neon-red-joy-
 
 headers = {"User-Agent": 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36'}
 
+f=open("Log.txt", "a+")
+
 def check_price():
     page = requests.get(URL, headers=headers)
 
@@ -17,7 +19,8 @@ def check_price():
     if Availability != text:
         send_mail()
     else:
-        print("Target: not in stock")
+        f.write("Target: not in stock")
+        f.write("\n")
 
 
 def send_mail():
@@ -38,8 +41,10 @@ def send_mail():
         'paulsoohyunhwang@gmail.com',
         msg
     )
-    print('Email has been sent')
+    f.write('Email has been sent')
+    f.write("\n")
 
     server.quit()
 
 check_price()
+f.close()
