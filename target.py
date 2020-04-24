@@ -1,7 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
 import smtplib
-import time
 
 URL = 'https://www.target.com/p/nintendo-switch-with-neon-blue-and-neon-red-joy-con/-/A-77464001'
 
@@ -43,6 +42,4 @@ def send_mail():
 
     server.quit()
 
-while(True):
-    check_price()
-    time.sleep(60)
+check_price()
