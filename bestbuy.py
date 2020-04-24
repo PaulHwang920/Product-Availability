@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 import smtplib
 import time
 
-URL = 'https://www.bestbuy.com/site/animal-crossing-new-horizons-nintendo-switch/5723316.p?skuId=5723316'
+URL = 'https://www.bestbuy.com/site/nintendo-switch-32gb-console-neon-red-neon-blue-joy-con/6364255.p?skuId=6364255&irclickid=2-HVx9URLxyOUGR0MdV3iVCmUki2tzyBUVyxUA0&irgwc=1&ref=198&loc=2-HVx9URLxyOUGR0MdV3iVCmUki2tzyBUVyxUA0&acampID=614286&mpid=10078'
 
 headers = {"User-Agent": 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36'}
 
