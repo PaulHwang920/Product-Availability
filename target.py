@@ -18,7 +18,7 @@ def check_price():
     if Availability != text:
         send_mail()
     else:
-        print("not in stock")
+        print("Target: not in stock")
 
 
 def send_mail():
